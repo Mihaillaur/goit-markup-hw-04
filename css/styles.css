@@ -8,6 +8,8 @@
   --secondary-bcg-color: #f4f4fd;
   --color-grey: #434455;
   --color-border: #e7e9fc;
+  --customers-icon-color: #8e8f99;
+  --footer-hover-color: #31d0aa;
 }
 /* ==========сброс========== */
 h1,
@@ -70,7 +72,7 @@ body {
 .page-header-container {
   display: flex;
   align-items: center;
-  /* border-bottom: 1px solid #e7e9fc; */
+ 
 }
 .header {
   border-bottom: 1px solid #e7e9fc;
@@ -119,9 +121,7 @@ body {
   text-transform: uppercase;
   color: var(--primary-color);
   flex: none;
-  /* order: 0; */
-  /* flex-grow: 0; */
-}
+ }
 
 .menu-link {
   font-weight: 500;
@@ -165,20 +165,14 @@ body {
 /* ==========Герой========== */
 
 .page-hero-container {
-  /* padding-bottom: 188px; */
-  /* padding-top: 188px; */
-}
+ }
 .section-hero {
   background-color: var(--primary-color);
   padding: 188px 0;
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/hero/bg.jpg);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -251,7 +245,6 @@ body {
 }
 .advantages {
   display: flex;
-  /* padding: 120px 0; */
   gap: 24px;
 }
 
@@ -274,13 +267,11 @@ body {
   text-transform: capitalize;
   color: var(--primary-color);
   margin-bottom: 72px;
-  /* padding-bottom: 72px; */
 }
 .products-list {
   display: flex;
   margin: 0;
   gap: 24px;
-  /* padding-bottom: 120px; */
 }
 
 /* ==========Сукция 3========== */
@@ -296,8 +287,6 @@ body {
 }
 .employee {
   flex-basis: calc((100%-72px) / 4);
-  /* box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); */
   border-radius: 0px 0px 4px 4px;
 }
 .our-team-title {
@@ -308,15 +297,13 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--primary-color);
-  /* padding-top: 120px; */
   margin-bottom: 72px;
 }
 .emploee-card {
   text-align: center;
   padding: 32px 16px;
   background: #ffffff;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
 .name-employee {
@@ -349,40 +336,54 @@ body {
   height: 40px;
   border-radius: 50%;
   background-color: var(--btn-color-normal);
+  color: var(--secondary-bcg-color);
+}
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--hover-color);
+}
+.social-list-icon {
+  fill: currentColor;
 }
 /* ==========Клиенты========== */
 
+.customers {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
 .customers-title {
+  margin-bottom: 72px;
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 40px;
-  /* identical to box height, or 111% */
-
+  line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-
-  /* NAVY BLUE */
-
-  color: #2e2f42;
-
-  display: flex;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
+  color: var(--primary-color);
 }
 .customers-list {
   display: flex;
   gap: 24px;
 }
 .customers-list-item {
+  display: flex;
   width: 168px;
   height: 88px;
-  border: 1px solid #8e8f99;
+ }
+.customers-link {
+  color: var(--customers-icon-color);
+  border: 1px solid var(--customers-icon-color);
   border-radius: 4px;
 }
-.customers-link {
+.customers-link:hover,
+.customers-link:focus {
+  color: var(--hover-color);
+  border-color: var(--hover-color);
+}
+.customers-list-icon {
+  margin: 16px 32px;
+  fill: currentColor;
 }
 /* ==========Футер========== */
 
@@ -424,7 +425,44 @@ body {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   max-width: 264px;
-  /* margin-top: 18px; */
+}
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+.footer-left {
+  display: inline-block;
+  margin-right: 120px;
+}
+.social-media-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--primary-light-color);
+  margin-bottom: 16px;
+}
+.media-list {
+  display: flex;
+  gap: 16px;
+}
+.media-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--secondary-bcg-color);
+  background-color: var(--btn-color-normal);
+}
+.media-link:hover,
+.media-link:focus {
+  background-color: var(--footer-hover-color);
+}
+.media-icon {
+  fill: currentColor;
 }
 
 /* ==========Фильтр Портфолио========== */
@@ -434,19 +472,13 @@ body {
   padding-bottom: 120px;
 }
 .portfolio-container {
-  /* margin-bottom: 120px; */
-}
+ }
 .filter-list {
-  /* padding-top: 96px; */
-  display: flex;
-  /* margin-left: auto; */
-  /* margin-right: auto; */
-  /* align-items: center; */
+    display: flex;
   justify-content: center;
   gap: 24px;
   margin-bottom: 72px;
 }
-
 .filter-button {
   display: block;
   font-family: var(--primary-font);
@@ -466,6 +498,7 @@ body {
   color: var(--primary-light-color);
   background: var(--hover-color);
   border: 1px solid transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* ==========card-set========== */
 
@@ -480,12 +513,14 @@ body {
 .services-list-item {
   row-gap: 24px;
 }
+.services-list-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 .card {
   padding: 32px 16px;
   background: #ffffff;
   border: 1px solid #e7e9fc;
   border-top: 0;
-  /* margin: 32px 0; */
 }
 .services-title {
   font-weight: 500;
